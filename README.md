@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://via.placeholder.com/900x250?text=Glorious+Cobbler+Website" alt="Glorious Cobbler Banner"/>
+  <img src="https://github.com/AndrewIsaCoder/Glorious-cobbler-website/blob/main/Design/glorious-high-resolution-logo-transparent.png?raw=true" alt="Glorious Cobbler Banner"/>
 </p>
 
 <h1 align="center">👞 Glorious Cobbler Website</h1>
@@ -37,10 +37,15 @@ Copy code
 
 ---
 
-## 🖼️ Screenshots
+## 🖼️ Gallery
 
-> Add your own screenshots in this folder and update the links!
+<p align="center">
+  <img src="[https://via.placeholder.com/600x350?text=Home+Preview](https://github.com/AndrewIsaCoder/Glorious-cobbler-website/blob/main/Design/Design%202.0.png?raw=true)" width="60%" />
+</p>
 
+<p align="center">
+  <img src="[https://via.placeholder.com/600x350?text=Services+Preview](https://github.com/AndrewIsaCoder/Glorious-cobbler-website/blob/main/Design/logo%20favicon.png?raw=true)" width="60%" />
+</p>
 <p align="center">
   <img src="https://via.placeholder.com/600x350?text=Home+Preview" width="60%" />
 </p>
@@ -49,6 +54,13 @@ Copy code
   <img src="https://via.placeholder.com/600x350?text=Services+Preview" width="60%" />
 </p>
 
+<p align="center">
+  <img src="https://via.placeholder.com/600x350?text=Home+Preview" width="60%" />
+</p>
+
+<p align="center">
+  <img src="https://via.placeholder.com/600x350?text=Services+Preview" width="60%" />
+</p>
 ---
 
 ## 🚀 Getting Started
