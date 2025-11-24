@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Glorious</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./Design/logo favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <button id="lang-toggle" class="lang-toggle">EN | ES</button>
+        <a href="home.html" class="logo">
+          <img
+            src="./Design/glorious-high-resolution-logo-transparent.png"
+            alt="Glorious Shoemaker Logo"
+          />
+        </a>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="home.html" data-i18n="nav-home">Home</a></li>
+            <li>
+              <a href="services.html" data-i18n="nav-services">Services</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="active" data-i18n="nav-gallery"
+                >Gallery</a
+              >
+            </li>
+            <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+          </ul>
+          <div class="mobile-menu-btn" id="mobile-menu-btn">&#9776;</div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="page-header section-padding text-center"
+        style="background-color: var(--color-secondary)"
+      >
+        <div class="container">
+          <h1 data-i18n="gallery-title">Our Work</h1>
+          <p data-i18n="gallery-subtitle">
+            A showcase of our finest craftsmanship.
+          </p>
+        </div>
+      </section>
+
+      <section class="gallery-section section-padding">
+        <div class="container">
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <div
+                class="gallery-img-placeholder"
+                style="
+                  background-image: url('./gallery/leather-restoration.jpg');
+                "
+              ></div>
+              <div class="gallery-overlay">
+                <h3 data-i18n="gal-leather">Leather Restoration</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div
+                class="gallery-img-placeholder"
+                style="background-image: url('./gallery/Heel-tips.jpg')"
+              ></div>
+              <div class="gallery-overlay">
+                <h3 data-i18n="gal-heel">Heel Replacement</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div
+                class="gallery-img-placeholder"
+                style="background-image: url('./gallery/custom-stitching.png')"
+              ></div>
+              <div class="gallery-overlay">
+                <h3 data-i18n="gal-stitch">Custom Stitching</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div
+                class="gallery-img-placeholder"
+                style="background-image: url('./gallery/sole-repair.png')"
+              ></div>
+              <div class="gallery-overlay">
+                <h3 data-i18n="gal-sole">Sole Repair</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div
+                class="gallery-img-placeholder"
+                style="background-image: url('./gallery/boot-polish.png')"
+              ></div>
+              <div class="gallery-overlay">
+                <h3 data-i18n="gal-polish">Boot Polish</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div
+                class="gallery-img-placeholder"
+                style="background-image: url('./gallery/full-resole.jpeg')"
+              ></div>
+              <div class="gallery-overlay">
+                <h3 data-i18n="gal-resole">Full Resole</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" />
+        <div id="caption"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Glorious Shoemaker</h3>
+            <p data-i18n="footer-desc">
+              Crafting excellence for your feet. Premium repair and custom
+              designs.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3 data-i18n="footer-quick-links">Quick Links</h3>
+            <ul>
+              <li><a href="home.html" data-i18n="nav-home">Home</a></li>
+              <li>
+                <a href="services.html" data-i18n="nav-services">Services</a>
+              </li>
+              <li>
+                <a href="gallery.html" data-i18n="nav-gallery">Gallery</a>
+              </li>
+              <li>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 data-i18n="footer-contact-us">Contact Us</h3>
+            <a
+              href="https://www.waze.com/en/live-map/directions/palatul-parlamentului-str.-izvor-2-4-bucuresti?place=w.17105340.170987867.333043"
+              >123 Cobbler Lane</a
+            >
+            <br />
+            <a
+              href="https://www.waze.com/en/live-map/directions/palatul-parlamentului-str.-izvor-2-4-bucuresti?place=w.17105340.170987867.333043"
+              >Cityville, ST 12345</a
+            >
+            <br />
+            <a href="tel:+40722222222">Phone: +40722222222</a>
+            <br />
+            <a href="mailto:hello@gloriousshoemaker.com"
+              >Email: hello@gloriousshoemaker.com</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p data-i18n="footer-rights">
+            &copy; 2025 Glorious Shoemaker. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

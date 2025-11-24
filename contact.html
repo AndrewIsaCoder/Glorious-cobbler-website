@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Glorious</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./Design/logo favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <button id="lang-toggle" class="lang-toggle">EN | ES</button>
+        <a href="home.html" class="logo">
+          <img
+            src="./Design/glorious-high-resolution-logo-transparent.png"
+            alt="Glorious Shoemaker Logo"
+          />
+        </a>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="home.html" data-i18n="nav-home">Home</a></li>
+            <li>
+              <a href="services.html" data-i18n="nav-services">Services</a>
+            </li>
+            <li><a href="gallery.html" data-i18n="nav-gallery">Gallery</a></li>
+            <li>
+              <a href="contact.html" class="active" data-i18n="nav-contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="mobile-menu-btn" id="mobile-menu-btn">&#9776;</div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="page-header section-padding text-center"
+        style="background-color: var(--color-secondary)"
+      >
+        <div class="container">
+          <h1 data-i18n="contact-title">Get in Touch</h1>
+          <p data-i18n="contact-subtitle">We'd love to hear from you.</p>
+        </div>
+      </section>
+
+      <section class="contact-section section-padding">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h2 data-i18n="visit-us">Visit Us</h2>
+              <p data-i18n="visit-desc">
+                Come by our shop for a consultation or drop off your shoes.
+              </p>
+
+              <div class="info-item">
+                <a
+                  href="https://www.waze.com/en/live-map/directions/palatul-parlamentului-str.-izvor-2-4-bucuresti?place=w.17105340.170987867.333043"
+                >
+                  <h3 data-i18n="address-title">Address</h3>
+                  <p>123 Cobbler Lane<br />Cityville, ST 12345</p>
+                </a>
+              </div>
+
+              <div class="info-item">
+                <h3 data-i18n="hours-title">Hours</h3>
+                <p data-i18n="hours-desc">
+                  Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM<br />Sun:
+                  Closed
+                </p>
+              </div>
+
+              <div class="info-item">
+                <h3 data-i18n="contact-info-title">Contact</h3>
+                <p>
+                  <a href="tel:+40722222222">Phone: +4072222222</a><br /><a
+                    href="mailto:hello@gloriousshoemaker.com"
+                    >Email: hello@gloriousshoemaker.com</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+              <h2 data-i18n="send-msg">Send a Message</h2>
+              <form class="contact-form">
+                <div class="form-group">
+                  <label for="name" data-i18n="form-name">Name</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email" data-i18n="form-email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone" data-i18n="form-phone"
+                    >Phone (Optional)</label
+                  >
+                  <input type="tel" id="phone" name="phone" />
+                </div>
+                <div class="form-group">
+                  <label for="message" data-i18n="form-msg">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn" data-i18n="form-btn">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Glorious Shoemaker</h3>
+            <p data-i18n="footer-desc">
+              Crafting excellence for your feet. Premium repair and custom
+              designs.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3 data-i18n="footer-quick-links">Quick Links</h3>
+            <ul>
+              <li><a href="home.html" data-i18n="nav-home">Home</a></li>
+              <li>
+                <a href="services.html" data-i18n="nav-services">Services</a>
+              </li>
+              <li>
+                <a href="gallery.html" data-i18n="nav-gallery">Gallery</a>
+              </li>
+              <li>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 data-i18n="footer-contact-us">Contact Us</h3>
+            <a
+              href="https://www.waze.com/en/live-map/directions/palatul-parlamentului-str.-izvor-2-4-bucuresti?place=w.17105340.170987867.333043"
+              >123 Cobbler Lane</a
+            >
+            <br />
+            <a
+              href="https://www.waze.com/en/live-map/directions/palatul-parlamentului-str.-izvor-2-4-bucuresti?place=w.17105340.170987867.333043"
+              >Cityville, ST 12345</a
+            >
+            <br />
+            <a href="tel:+40722222222">Phone: +40722222222</a>
+            <br />
+            <a href="mailto:hello@gloriousshoemaker.com"
+              >Email: hello@gloriousshoemaker.com</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p data-i18n="footer-rights">
+            &copy; 2025 Glorious Shoemaker. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
