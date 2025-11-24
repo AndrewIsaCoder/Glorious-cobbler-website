@@ -38,7 +38,7 @@ Glorious-cobbler-website/
 ## 🖼️ Gallery
 
 <p align="center">
-  <img src="https://ibb.co/HfrKC6Hn" width="60%" />
+  <img src="" width="60%" />
 </p>
 
 <p align="center">
