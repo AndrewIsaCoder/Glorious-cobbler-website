@@ -40,7 +40,7 @@ Copy code
 ## 🖼️ Gallery
 
 <p align="center">
-  <img src="[https://via.placeholder.com/600x350?text=Home+Preview](https://github.com/AndrewIsaCoder/Glorious-cobbler-website/blob/main/Design/Design%202.0.png?raw=true)" width="60%" />
+  <img src="[[https://via.placeholder.com/600x350?text=Home+Preview](https://github.com/AndrewIsaCoder/Glorious-cobbler-website/blob/main/Design/Design%202.0.png?raw=true)](https://github.com/AndrewIsaCoder/Glorious-cobbler-website/blob/main/Design/logo%20favicon.png?raw=true)" width="60%" />
 </p>
 
 <p align="center">
