@@ -36,29 +36,8 @@ Glorious-cobbler-website/
 ---
 
 ## 🖼️ Gallery
+D:\PROGRAMARE\PROIECT PERSONALE\Site Prezentare Cizmar\Glorious-cobbler-website\Design\Design 2.0.png
 
-<p align="center">
-  <img src="https://ibb.co/HfrKC6Hn" width="60%" />
-</p>
-
-<p align="center">
-  <img src="" width="60%" />
-</p>
-<p align="center">
-  <img src="" />
-</p>
-
-<p align="center">
-  <img src="" width="60%" />
-</p>
-
-<p align="center">
-  <img src="" width="60%" />
-</p>
-
-<p align="center">
-  <img src="" width="60%" />
-</p>
 ---
 
 ## 🚀 Getting Started
