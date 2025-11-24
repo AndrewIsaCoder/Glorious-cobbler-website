@@ -38,26 +38,26 @@ Glorious-cobbler-website/
 ## 🖼️ Gallery
 
 <p align="center">
-  <img src="./" width="60%" />
+  <img src="./Design/glorious-high-resolution-logo-transparent.png"/>
 </p>
 
 <p align="center">
-  <img src="./Design/glorious-high-resolution-logo-transparent.png" width="60%" />
+  <img src="./readme photos/{8B5F0D9B-11EF-4826-8205-D4E44D7634DC}.png"/>
 </p>
 <p align="center">
-  <img src="" />
-</p>
-
-<p align="center">
-  <img src="" width="60%" />
+  <img src="./readme photos/{BDA6881C-D309-43CC-8BAF-E020EA6DC16C}.png" />
 </p>
 
 <p align="center">
-  <img src="" width="60%" />
+  <img src="./readme photos/{C07F2488-77A1-4F5D-9B23-3B42E711F5DB}.png"/>
 </p>
 
 <p align="center">
-  <img src="" width="60%" />
+  <img src="./readme photos/{E945757D-A7B1-4980-84D8-3D3DB329AA52}.png"/>
+</p>
+
+<p align="center">
+  <img src="./readme photos/{EBA2B0E7-B9DC-48BF-B64B-2BEEB04557D8}.png"/>
 </p>
 ---
 
