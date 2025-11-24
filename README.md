@@ -32,34 +32,32 @@ Glorious-cobbler-website/
 │── style.css
 └── main.js
 
-yaml
-Copy code
 
 ---
 
 ## 🖼️ Gallery
 
 <p align="center">
-  <img src="[[https://via.placeholder.com/600x350?text=Home+Preview](https://github.com/AndrewIsaCoder/Glorious-cobbler-website/blob/main/Design/Design%202.0.png?raw=true)](https://github.com/AndrewIsaCoder/Glorious-cobbler-website/blob/main/Design/logo%20favicon.png?raw=true)" width="60%" />
+  <img src="" width="60%" />
 </p>
 
 <p align="center">
-  <img src="[https://via.placeholder.com/600x350?text=Services+Preview](https://github.com/AndrewIsaCoder/Glorious-cobbler-website/blob/main/Design/logo%20favicon.png?raw=true)" width="60%" />
+  <img src="" width="60%" />
 </p>
 <p align="center">
-  <img src="https://via.placeholder.com/600x350?text=Home+Preview" width="60%" />
-</p>
-
-<p align="center">
-  <img src="https://via.placeholder.com/600x350?text=Services+Preview" width="60%" />
+  <img src="" />
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x350?text=Home+Preview" width="60%" />
+  <img src="" width="60%" />
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x350?text=Services+Preview" width="60%" />
+  <img src="" width="60%" />
+</p>
+
+<p align="center">
+  <img src="" width="60%" />
 </p>
 ---
 
