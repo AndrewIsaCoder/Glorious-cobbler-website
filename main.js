@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Ollama API Configuration
   const OLLAMA_API_URL = "http://localhost:11434/api/generate";
-  const OLLAMA_MODEL = "gemma3:270m"; // Change to your preferred model (llama2, mistral, etc.)
+  const OLLAMA_MODEL = "phi3:3.8b"; // Change to your preferred model (llama2, mistral, etc.)
 
   // System prompt for the AI assistant
   const SYSTEM_PROMPT = `Ești un asistent virtual pentru "Glorious Shoemaker", o CIZMĂRIE DE REPARAȚII (nu magazin de pantofi!).
