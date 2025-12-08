@@ -367,8 +367,90 @@ document.addEventListener("DOMContentLoaded", () => {
     aiChatContainer.scrollTop = aiChatContainer.scrollHeight;
   }
 
-  // Send message (placeholder for now, will integrate with Ollama later)
-  function sendMessage() {
+  // Ollama API Configuration
+  const OLLAMA_API_URL = "http://localhost:11434/api/generate";
+  const OLLAMA_MODEL = "gemma3:270m"; // Change to your preferred model (llama2, mistral, etc.)
+
+  // System prompt for the AI assistant
+  const SYSTEM_PROMPT = `Ești un asistent virtual prietenos pentru "Glorious Shoemaker", o cizmărie premium cu peste 20 ani de experiență.
+
+Rolul tău:
+- Ajuți clienții să găsească serviciul potrivit pentru pantofii lor
+- Pui întrebări despre tipul de serviciu necesar (reparare, restaurare, design personalizat)
+- Întrebi despre materialul pantofilor (piele, piele întoarsă/suede, pânză, etc.)
+- Recomanzi servicii specifice bazate pe nevoile lor
+
+Serviciile noastre:
+1. REPARARE: Înlocuire tocuri, înlocuire tălpi, cusături
+2. RESTAURARE: Curățare profundă, restaurare culoare, condiționare piele
+3. DESIGN PERSONALIZAT: Modificări custom, pantofi la comandă
+
+Reguli:
+- Răspunde DOAR în limba română
+- Fii concis (maxim 2-3 propoziții)
+- Fii prietenos și profesionist
+- După ce ai înțeles nevoia, recomandă serviciul specific și sugerează contactarea noastră
+- Nu inventa servicii care nu există în lista de mai sus
+
+Contacte: Telefon +40722222222, sau pagina de Contact de pe site.`;
+
+  // Call Ollama API
+  async function callOllama(userMessage, conversationHistory = []) {
+    try {
+      // Build the full prompt with conversation history
+      let fullPrompt = SYSTEM_PROMPT + "\n\n";
+
+      // Add conversation history
+      conversationHistory.forEach((msg) => {
+        if (msg.role === "user") {
+          fullPrompt += `Client: ${msg.content}\n`;
+        } else {
+          fullPrompt += `Asistent: ${msg.content}\n`;
+        }
+      });
+
+      // Add current user message
+      fullPrompt += `Client: ${userMessage}\nAsistent:`;
+
+      const response = await fetch(OLLAMA_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: OLLAMA_MODEL,
+          prompt: fullPrompt,
+          stream: false,
+          options: {
+            temperature: 0.7,
+            top_p: 0.9,
+          },
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return data.response.trim();
+    } catch (error) {
+      console.error("Ollama API Error:", error);
+
+      // User-friendly error messages
+      if (error.message.includes("Failed to fetch")) {
+        return "Îmi pare rău, nu pot conecta la serviciul AI. Te rog verifică dacă Ollama rulează (rulează 'ollama serve' în terminal). Între timp, mă poți contacta direct la +40722222222! 😊";
+      }
+
+      return "Îmi pare rău, am întâmpinat o problemă tehnică. Te rog încearcă din nou sau contactează-ne direct la +40722222222! 📞";
+    }
+  }
+
+  // Conversation history to maintain context
+  let conversationHistory = [];
+
+  // Send message with Ollama integration
+  async function sendMessage() {
     const message = aiInput.value.trim();
     if (!message) return;
 
@@ -376,53 +458,29 @@ document.addEventListener("DOMContentLoaded", () => {
     addUserMessage(message);
     aiInput.value = "";
 
+    // Add to conversation history
+    conversationHistory.push({
+      role: "user",
+      content: message,
+    });
+
     // Show typing indicator
     showTypingIndicator();
 
-    // Simulate AI response (will be replaced with Ollama integration)
-    setTimeout(() => {
-      removeTypingIndicator();
+    // Call Ollama API
+    const response = await callOllama(message, conversationHistory);
 
-      // Simple mock response based on keywords
-      let response =
-        "Îmi pare rău, nu am înțeles. Poți să-mi spui ce tip de serviciu cauți? (Reparare, Restaurare, sau Design Personalizat)";
+    // Remove typing indicator
+    removeTypingIndicator();
 
-      const lowerMessage = message.toLowerCase();
-      if (
-        lowerMessage.includes("reparare") ||
-        lowerMessage.includes("repara")
-      ) {
-        response =
-          "Perfect! Pentru reparare, avem servicii de înlocuire tocuri, înlocuire tălpi și cusături. Ce material sunt pantofii tăi? (piele, piele întoarsă, pânză)";
-      } else if (
-        lowerMessage.includes("restaurare") ||
-        lowerMessage.includes("curățare")
-      ) {
-        response =
-          "Excelent! Serviciile noastre de restaurare includ curățare profundă, restaurare culoare și condiționare piele. Ce material sunt pantofii tăi?";
-      } else if (
-        lowerMessage.includes("piele") &&
-        !lowerMessage.includes("întoarsă")
-      ) {
-        response =
-          "Minunat! Pentru pantofi din piele, recomand serviciul nostru de 'Deep Leather Conditioning' care include curățare profundă și condiționare. Vrei să vezi mai multe detalii sau să ne contactezi?";
-      } else if (
-        lowerMessage.includes("piele întoarsă") ||
-        lowerMessage.includes("suede")
-      ) {
-        response =
-          "Perfect! Pentru piele întoarsă/suede, avem un serviciu specializat de curățare care îndepărtează petele fără a deteriora materialul delicat. Vrei să programezi o consultație?";
-      } else if (
-        lowerMessage.includes("da") ||
-        lowerMessage.includes("contact") ||
-        lowerMessage.includes("detalii")
-      ) {
-        response =
-          "Minunat! Poți să ne contactezi la +40722222222 sau să vizitezi pagina noastră de <a href='contact.html' style='color: var(--color-primary); text-decoration: underline;'>Contact</a>. Suntem aici pentru tine!";
-      }
+    // Add bot response
+    addBotMessage(response);
 
-      addBotMessage(response);
-    }, 1500);
+    // Add to conversation history
+    conversationHistory.push({
+      role: "assistant",
+      content: response,
+    });
   }
 
   // Send button click
