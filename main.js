@@ -453,7 +453,7 @@ Contacte: Telefon +40722222222, sau pagina de Contact.`;
 
       // User-friendly error messages
       if (error.message.includes("Failed to fetch")) {
-        return "Îmi pare rău, nu pot conecta la serviciul AI. Te rog verifică dacă Ollama rulează (rulează 'ollama serve' în terminal). Între timp, mă poți contacta direct la +40722222222! 😊";
+        return "Îmi pare rău , dar serviciul nostru AI nu functioneaza Între timp, ne poți contacta direct la +40722222222! 😊";
       }
 
       return "Îmi pare rău, am întâmpinat o problemă tehnică. Te rog încearcă din nou sau contactează-ne direct la +40722222222! 📞";
@@ -511,3 +511,4 @@ Contacte: Telefon +40722222222, sau pagina de Contact.`;
     });
   }
 });
+
