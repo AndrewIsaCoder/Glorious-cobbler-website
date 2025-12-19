@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Ollama API Configuration
   const OLLAMA_API_URL = "http://localhost:11434/api/generate";
-  const OLLAMA_MODEL = "gpt-oss:120b-cloud"; // Change to your preferred model (llama2, mistral, etc.)
+  const OLLAMA_MODEL = "gemma3:270m";
 
   // System prompt for the AI assistant
   const SYSTEM_PROMPT = `Ești un asistent virtual pentru "Glorious Shoemaker", o CIZMĂRIE DE REPARAȚII (nu magazin de pantofi!).
@@ -453,10 +453,10 @@ Contacte: Telefon +40722222222, sau pagina de Contact.`;
 
       // User-friendly error messages
       if (error.message.includes("Failed to fetch")) {
-        return "Îmi pare rău , dar serviciul nostru AI nu functioneaza Între timp, ne poți contacta direct la +40722222222! 😊";
+        return "Îmi pare rău, dar serviciul nostru AI nu funcționează momentan. Între timp, ne poți contacta direct la +40722222222!";
       }
 
-      return "Îmi pare rău, am întâmpinat o problemă tehnică. Te rog încearcă din nou sau contactează-ne direct la +40722222222! 📞";
+      return "Îmi pare rău, am întâmpinat o problemă tehnică. Te rog încearcă din nou sau contactează-ne direct la +40722222222!";
     }
   }
 
@@ -511,4 +511,3 @@ Contacte: Telefon +40722222222, sau pagina de Contact.`;
     });
   }
 });
-
